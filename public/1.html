@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>地图Demo</title>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="baidumap.js"></script>
+</head>
+<body>
+    <div>
+        <p>1.点击添加标注，并且保证标注只有一个。点击的位置信息设置到页面的输入框中</p>
+        <p>2.输入地址建议，选择建议项的时候，地址中添加标注并将地图移到对应位置</p>
+        <p>
+            3.做个保存按钮，模拟点击保存时，获取地理位置信息
+        </p>
+    </div>
+    <input type="text" id="abc">
+    <input type="text" name="lng">
+    <input type="text" name="lat">
+    <div id="map" style="width:600px;height:600px">
+    </div>
+   <script>
+       var a,b
+       function get(e){
+           console.log(e.point.lat)
+           a=e.point.lat
+           b=e.point.lng
+        
+       }
+       
+       var map= new BMap.Map("map")
+       map.centerAndZoom(new BMap.Point(118.156801,24.485408), 13);
+       map.addEventListener("click", get)
+       var point = new BMap.Point(a, b); 
+        map.centerAndZoom(point, 15);    
+        var marker = new BMap.Marker(point);       
+        map.addOverlay(marker);
+   </script>
+</body>
+</html>

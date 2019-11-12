@@ -1,0 +1,158 @@
+@maincolor:rgba(17, 168, 228, 0.671);
+body{
+    padding: 0px;
+    margin: 0px;
+}
+#topbar{
+    z-index: 1999;
+    position: fixed;
+}
+#left{
+    width:200px;
+    height:100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background:darken(@maincolor,50);
+}
+#main{
+    margin-left:200px;
+    padding-top:50px;
+    #topbar{
+        position: fixed;
+        left:200px;
+        top:0;
+        right:0;
+        height:50px;
+        background: #fefefe;
+        box-shadow: 0 0  5px rgba(0,0,0,0.4);
+    }
+}
+.el-col-12 {
+    height: 100%;
+    width: 100%;
+    background:darken(@maincolor,50);
+}
+a{
+    text-decoration: none;
+}
+.el-breadcrumb{
+   margin-top: 20px; 
+   margin-left: 20px;
+}
+.el-dropdown-link {
+    cursor: pointer;
+    color: #409EFF;
+  }
+  .el-icon-arrow-down {
+    font-size: 12px;
+  }
+  .el-dropdown{
+      position: fixed;
+      right:20px;
+      top: 15px;
+  }
+  .ooo{
+      width: 65px;
+      height: 25px;
+      background: rgb(222, 245, 16);
+      border: none;
+      cursor: pointer;
+      color:rgb(70, 54, 54);
+      border-radius: 5px;
+      font-size: 12px;
+  }
+  .btn{
+    border:1px solid #ccc;
+    padding:10px 20px;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+    outline: none;
+    
+}
+
+.btn:hover{
+    box-shadow: 0px 0px 100px rgba(0,0,0,.07) inset;
+}
+.btn:active{
+    box-shadow: 0px 0px 100px rgba(0,0,0,.15) inset;
+}
+.btn.small{
+    padding:8px 16px;
+}
+.btn.primary{
+    background: #1f78fe;
+    color:#fff;
+    border:#1c6de7;
+}
+
+.btn.success{
+    background: #47da95;
+    color:#fff;
+    border:#2abb77;
+}
+.btn.warning{
+    background: #ffcc41;
+    color:#fff;
+    border:#ebce4e;
+}
+
+
+.btn.danger{
+    background: #e2444c;
+    color:#fff;
+    border:#b6383e;
+}
+
+
+.dialog label span{
+    display: block;
+    float:left;
+    width:80px;
+    height: 37px;
+    line-height: 37px;
+}
+
+.dialog label input{
+    width:calc(100% - 80px);
+    box-sizing: border-box;
+    padding: 10px 5px;
+
+    border-radius: 5px;
+    outline: none;
+    border:1px solid #ccc;
+}
+.dialog label input:focus{
+    box-shadow:0px 0px 1px #1c6de7;
+}
+.el-scrollbar__wrap {
+    overflow-x: hidden;
+  }
+.toolbar{
+   
+    .searchinput{
+        width: 450px;
+    }
+   display:inline-flex;
+   padding-left: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    .el-input__inner{
+        border-radius: 15px 0px 0px 15px;
+        margin-left: 10px;
+    }
+    .el-input-group__append{
+        border-radius: 0px 15px 15px 0px;
+       
+    }
+}
+#zzz{
+    margin-left: 10px;
+}
+.el-dropdown{
+    position: fixed;
+    right: 20px;
+    top: 0px;
+}
+
